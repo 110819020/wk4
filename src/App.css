@@ -116,6 +116,24 @@ body {
   margin-bottom: 2rem;
 }
 
+@media(max-width: 576px){
+  .nav-bar {
+    background-color: #111828;
+    position: absolute;
+    margin-top: 0px;
+    z-index: 99;
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  
+}
+
+.nav-bar-hide{
+  display: none;
+}
+
 .nav-item {
   font-size: 1rem;
   text-align: center;
@@ -271,4 +289,65 @@ body {
   font-size: 1rem;
   opacity: 0.7;
   margin-left: 2rem;
+}
+
+/* burgerBtn */
+.burger {
+  z-index: 90;
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: fixed;
+  margin: 5.5px;
+  border: none;
+  left: 3%;
+  top: 3%;
+  background: none;
+  transition: all 0.6s ease;
+  padding: 0;
+}
+@media(min-width: 576px){
+  .burger {
+      display: none;
+  }
+}
+.burger-manu::before,
+.burger-manu::after {
+      content: "";
+      position: absolute;
+}
+.burger-manu,
+.burger-manu::before,
+.burger-manu::after {
+      width: 20px;
+      height: 3px;
+      border-radius: 1px;
+      margin: 0 auto;
+      display: block;
+      transition: all 0.6s ease;
+      background-color: #fff;
+}
+.burger-manu::before {
+      margin-top: 8px;
+}
+
+.burger-manu::after {
+      margin-top: -8px;
+}
+
+.is-change {
+  right: 40%;
+}
+
+.is-change span{
+  background-color: rgba(0, 0, 0, 0);
+}
+.is-change span::before {
+  margin-top: 0;
+  transform: rotate(-405deg);
+}
+
+.is-change span::after {
+  margin-top: 0;
+  transform: rotate(405deg);
 }
